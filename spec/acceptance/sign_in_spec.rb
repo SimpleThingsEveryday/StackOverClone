@@ -11,7 +11,7 @@ I want to ba able to sign in
     fill_in 'Email', with: 'user@test.com'
     fill_in 'Password' , with: '1234567890'
     save_and_open_page
-    click_on 'Sign in'
+    click_on 'Log in'
     expect(page).to have_content 'Signed in successfully.'
     expect(current_path).to eq root_path
 
@@ -21,7 +21,7 @@ I want to ba able to sign in
     fill_in 'Email', with: 'user2 @test.com'
     fill_in 'Password' , with: '1234567890'
     save_and_open_page
-    click_on 'Sign in'
+    click_on 'Log in'
     expect(page).to have_content 'invalid email or password'
     expect(current_path).to eq new_user_session_path
     save_and_open_page
