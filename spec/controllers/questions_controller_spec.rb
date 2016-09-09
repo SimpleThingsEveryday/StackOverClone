@@ -27,11 +27,7 @@ end
     end
   end
     describe 'GET #new' do
-      before(:each) do
-        @user = FactoryGirl.create(:user)
-        @request.env['devise.mapping'] = Devise.mappings[:user]
-        sign_in @user
-      end
+
     before(:each) do
       get :new
     end
